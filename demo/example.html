@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<title>下拉刷新演示</title>
+<style>
+body {
+    margin: 0;
+}
+.loading {
+    line-height: 40px;
+    height: 0;
+    text-align: center;
+    transition: height .25s, border-bottom-width .25s;
+    background-color: #eee;
+    font-size: 14px;
+    overflow: hidden;
+}
+</style>
+</head>
+
+<body>
+<div id="loading" class="loading">下拉加载...</div>
+<ol id="result">
+    
+</ol>
+<script src="http://qidian.gtimg.com/yuewen/v1/js/zepto.min.js"></script>
+<script src="../src/drag-loading.js"></script>
+<script>
+var fnCreateList = function () {
+    var html = '';
+    for (var index = 0; index < 100; index += 1) {
+        html = html + '<li>列表内容'+ (Math.random() + '').slice(-1 * Math.ceil(10 * Math.random())) +'</li>'
+    }
+    $('#result').html(html);
+};
+fnCreateList();
+
+
+// 下面是演示代码
+new DragLoading($('#loading'), {
+    onReload: function () {
+        var self = this;
+        setTimeout(function () {
+            fnCreateList();
+            self.origin();
+        }, 2000* Math.random());
+    }
+});
+</script>
+</body>
+</html>
