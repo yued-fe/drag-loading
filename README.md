@@ -41,6 +41,21 @@ new DragLoading(el, option);
 	</li>
 </ul>
 
+### 暴露属性和方法
+``` javascript
+{
+	// el就是loading元素
+	el: el,
+	// reload回调方法
+	callback: {
+		reload: function() {}
+	},
+	// loading元素高度等UI还原
+	origin: function() {},
+	// 下拉阻尼处理，这个一般用不到
+	damping: function () {}
+}
+```
 
 ## 补充tips
 · 本方法依赖jQuery.js或者Zepto.js。
