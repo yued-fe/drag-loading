@@ -3,13 +3,13 @@
 
 
 ## 如何使用
-1. 引入JS文件，例如
+<ol>
+	<li>引入JS文件，例如
 
 ``` html
 <script src="drag-loading.js"></script>
-```
-
-2. 绑定
+```</li>
+	<li>绑定
 
 ``` javascript
 new DragLoading(el, {
@@ -22,7 +22,8 @@ new DragLoading(el, {
 	    this.origin();
     }
 });
-```
+```</li>
+</ol>
 
 ## 语法
 ``` javascript
@@ -58,6 +59,8 @@ new DragLoading(el, option);
 ```
 
 ## 补充tips
-· 本方法依赖jQuery.js或者Zepto.js。
-· 仅支持窗体滚动，普通元素下拉加载可以自行微调支持，很简单，把<code>trigger</code>和滚动窗体都改成这个可以滚动的普通元素即可。
-· loading元素默认高度<code>0</code>隐藏，然后本方法会对底边框进行设置，因此，不要使用<code>border-bottom</code>相关样式。
+<ul>
+	<li>本方法依赖jQuery.js或者Zepto.js。</li>
+	<li>仅支持窗体滚动，普通元素下拉加载可以自行微调支持，很简单，把<code>trigger</code>和滚动窗体都改成这个可以滚动的普通元素即可。</li>
+	<li>loading元素默认高度<code>0</code>隐藏，然后本方法会对底边框进行设置，因此，不要使用<code>border-bottom</code>相关样式。</li>
+</ul>
