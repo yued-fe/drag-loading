@@ -4,14 +4,14 @@
 
 ## 如何使用
 <ol>
-	<li>引入JS文件，例如
+	<li>引入JS文件，例如：
 
-``` html
-<script src="drag-loading.js"></script>
-```</li>
+<pre>
+&lt;script src="drag-loading.js"&gt;&lt;/script&gt;
+</pre></li>
 	<li>绑定
 
-``` javascript
+<pre>
 new DragLoading(el, {
 	onReload: function() {
 	    /** 执行刷新操作
@@ -22,7 +22,7 @@ new DragLoading(el, {
 	    this.origin();
     }
 });
-```</li>
+</pre></li>
 </ol>
 
 ## 语法
