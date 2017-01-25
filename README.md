@@ -22,8 +22,7 @@ new DragLoading(el, {
 	    this.origin();
     }
 });
-```</li>
-</ol>
+```
 
 ## 语法
 ``` javascript
