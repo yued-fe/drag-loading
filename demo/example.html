@@ -7,6 +7,8 @@
 <style>
 body {
     margin: 0;
+    position: absolute;
+    width: 100%;
 }
 .loading {
     line-height: 40px;
@@ -40,6 +42,7 @@ fnCreateList();
 
 // 下面是演示代码
 new DragLoading($('#loading'), {
+    trigger: $('#result'),
     onReload: function () {
         var self = this;
         setTimeout(function () {

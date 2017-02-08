@@ -73,17 +73,17 @@ var DragLoading = function (el, option) {
             data.distanceY = distanceY;
 
             var moveY;
-            var valHeight
-
+            var valHeight;
 
             // 所有浏览器使用统一处理
-            if (elWindow.scrollTop() == 0 && distanceY > 0) {
-                // other browser
-                // 已经滚动到头，阻止默认滚动行为，例如iPhone Chrome的下拉加载
-                event.preventDefault();
+            if (elWindow.scrollTop() == 0) {
+            	if (distanceY > 0 || data.markY > 0) {
+            		// 已经滚动到头，阻止默认滚动行为，例如iPhone Chrome的下拉加载
+                	event.preventDefault();
+            	}
 
                 // 切换是否下拉loading标志量
-                if (data.markY == -1) {
+                if (distanceY > 0 && data.markY == -1) {
                     // 一旦滚动到顶部，开始下拉展开交互
                     // 1. 先设置标志量，此标志量只有在touch释放到时候才变更
                     // 同时记忆现在滚动到位置
